@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c77b6d05eb12f24d8e34c0b74c349bb, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
-  chance: 2
+  chance: 1
   cooldown: 1
   duration: 0
-  power: 1
+  power: 500
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 8
