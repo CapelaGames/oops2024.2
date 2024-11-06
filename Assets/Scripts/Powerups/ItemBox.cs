@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemBox : TriggerZone
+public class ItemBox : TriggerZone, IClickable
 {
     public Powerup[] powerup;
 
@@ -46,4 +46,16 @@ public class ItemBox : TriggerZone
        transform.Rotate(Vector3.up, speed * Time.deltaTime);
        cooldown -= Time.deltaTime;
     }
+
+    public void OnClick()
+    {
+        StartCoroutine(Spin());
+    }
+
+    IEnumerator Spin()
+    {
+        speed += 200f;
+        yield return new WaitForSeconds(2f);
+        speed -= 200f;
+    }    
 }

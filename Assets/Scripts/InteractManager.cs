@@ -6,7 +6,7 @@ public class InteractManager : MonoBehaviour
 {
     [SerializeField] Camera _camera;
 
-    private void Start()
+    private void Awake()
     {
         if(_camera == null) 
         {
